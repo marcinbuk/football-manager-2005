@@ -1,0 +1,19 @@
+{
+  "name": "Football Manager 2005 Browser",
+  "build": {
+    "dockerfile": "../Dockerfile",
+    "context": ".."
+  },
+  "features": {
+    "ghcr.io/devcontainers/features/github-cli:1": {}
+  },
+  "remoteUser": "gamer",
+  "forwardPorts": [7860],
+  "portsAttributes": {
+    "7860": {
+      "label": "Football Manager 2005",
+      "onAutoForward": "openBrowser"
+    }
+  },
+  "postStartCommand": "bash /app/start.sh --daemon"
+}
